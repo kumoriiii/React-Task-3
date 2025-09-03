@@ -14,8 +14,6 @@ export default function Shop() {
         </Link>
         <Link to="womens">Womens</Link>
       </nav>
-
-      {/* Nested route content goes here */}
       <Outlet />
     </div>
   );
