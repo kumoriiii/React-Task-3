@@ -9,7 +9,10 @@ export default function Navbar() {
       <Link to="/about" style={{ marginRight: "10px" }}>
         About
       </Link>
-      <Link to="/shop">Shop</Link>
+      <Link to="/shop" style={{ marginRight: "10px" }}>
+        Shop
+      </Link>
+      <Link to="/cart">Cart</Link>
     </nav>
   );
 }

@@ -2,19 +2,26 @@ import { Link, Outlet } from "react-router-dom";
 
 export default function Shop() {
   return (
-    <div>
-      <h2>Shop Page</h2>
+    <div style={{ display: "flex" }}>
+      <aside style={{ width: "150px", marginRight: "20px" }}>
+        <h3>Shop Menu</h3>
+        <ul style={{ listStyle: "none", padding: 0 }}>
+          <li>
+            <Link to="">All Products</Link>
+          </li>
+          <li>
+            <Link to="mens">Mens</Link>
+          </li>
+          <li>
+            <Link to="womens">Womens</Link>
+          </li>
+        </ul>
+      </aside>
 
-      <nav style={{ marginBottom: "15px" }}>
-        <Link to="" style={{ marginRight: "10px" }}>
-          All Products
-        </Link>
-        <Link to="mens" style={{ marginRight: "10px" }}>
-          Mens
-        </Link>
-        <Link to="womens">Womens</Link>
-      </nav>
-      <Outlet />
+      <main style={{ flex: 1 }}>
+        <h2>Shop Page</h2>
+        <Outlet />
+      </main>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Shop from "./pages/Shop";
 import AllProducts from "./pages/shop/AllProducts";
 import Mens from "./pages/shop/Mens";
 import Womens from "./pages/shop/Womens";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
@@ -16,12 +17,15 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
 
-        {/* Nested Routes for Shop */}
         <Route path="/shop" element={<Shop />}>
-          <Route index element={<AllProducts />} /> {/* default */}
+          <Route index element={<AllProducts />} />
           <Route path="mens" element={<Mens />} />
           <Route path="womens" element={<Womens />} />
         </Route>
+
+        <Route path="/cart" element={<NotFound />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
